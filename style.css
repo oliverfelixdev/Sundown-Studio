@@ -1,0 +1,160 @@
+::selection {
+  background-color: #716c67;
+  color: #efeae3;
+}
+
+body {
+  overflow-x: hidden;
+  user-select: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #0b0500;
+}
+
+@font-face {
+  font-family: roman;
+  src: url(./assets/fonts/NeueHaasDisplayRoman.ttf);
+}
+
+@font-face {
+  font-family: romanMedium;
+  font-weight: 900;
+  src: url(./assets/fonts/NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+  font-family: romanLight;
+  src: url(./assets/fonts/NeueHaasDisplayLight.ttf);
+}
+
+.nav-anchors-part2 a::after {
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #0b0500;
+  bottom: -100%;
+  border-radius: 100%;
+  transition: all ease 0.3s;
+}
+
+.nav-anchors-part2 a:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+.nav-anchors-part2 a:hover {
+  color: #fff;
+}
+
+#frame-Identifier-1 {
+  background-color: #fe320a;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(40px);
+  position: absolute;
+}
+
+#frame-Identifier-2 {
+  top: 25%;
+  z-index: 2;
+  position: absolute;
+  background: linear-gradient(#000000, #000000);
+  height: 80vw;
+  height: 80vw;
+
+  filter: blur(0px);
+  animation: heroframeslinear-2 3s linear infinite alternate;
+}
+
+#frame-Identifier-3 {
+  position: absolute;
+  background: linear-gradient(#fe320a, #ff0000);
+  height: 30vw;
+  width: 30vw;
+  border-radius: 30%;
+  filter: blur(30px);
+  animation: heroframeslinear-3 3s linear infinite alternate;
+}
+
+@keyframes heroframeslinear-3 {
+  from {
+    filter: blur(40px);
+    transform: translate(10%, -10%) skew(0);
+  }
+
+  to {
+    filter: blur(50px);
+    transform: translate(-10%, 10%) skew(-12deg);
+  }
+}
+
+.moving-slider-infinite {
+  margin-top: 7vw;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.moving-slider-infinite::-webkit-scrollbar {
+  display: none;
+}
+
+.animation-con {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slidemv 15s linear infinite;
+}
+
+.moving-slider-infinite h5 {
+  font-family: romanMedium;
+  font-weight: 900;
+  display: inline-block;
+  font-size: 8vw;
+}
+
+#circle-olack {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #fe330a;
+  margin: 1vw 2vw;
+}
+
+@keyframes slidemv {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes gooey {
+  from {
+    filter: blur(40px);
+    transform: translate(10%, -10%) skew(0);
+  }
+
+  to {
+    filter: blur(50px);
+    transform: translate(-10%, 10%) skew(-12deg);
+  }
+}
+
+.page3 {
+  height: 100vh;
+  width: 100vw;
+  background-color: #efeae3;
+}
